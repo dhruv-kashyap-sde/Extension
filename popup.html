@@ -4,43 +4,72 @@
   <title>Font Changer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      width: 400px;
-      margin: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      /* margin: 20px; */
       padding: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 300px;
     }
     h2 {
-      margin-bottom: 10px;
+      color: #17a3ce;
     }
     select {
       width: 100%;
       padding: 10px;
       margin-bottom: 10px;
+      font-family: inherit;
+      border-radius: 10px;
+      outline: #0e8ab5 1px solid;
+      border: #0e8ab5 1px solid;
+    }
+    option {
+      font-family: inherit;
     }
     button {
       padding: 10px;
       width: 100%;
       cursor: pointer;
       border: none;
-      background-color: #4CAF50;
+      background-color: #17a3ce;
       color: white;
       font-size: 16px;
+      transition: 0.2s ease-in-out;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: #0e8ab5;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content:start;
+        gap: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .header img{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
     }
   </style>
 </head>
 <body>
-  <h2>Select a Font</h2>
+  <div class="header">
+    <img src="icon128.png" alt="icon">
+    <h2>Select a Font</h2>
+  </div>
   <select id="fontSelector">
-    <option value="Arial">Arial</option>
-    <option value="Courier New">Courier New</option>
-    <option value="Georgia">Georgia</option>
-    <option value="Times New Roman">Times New Roman</option>
-    <option value="Trebuchet MS">Trebuchet MS</option>
-    <option value="Verdana">Verdana</option>
-    <!-- Add more font options here -->
+    <option value="Arial" style="font-family: Arial;">Arial</option>
+    <option value="Courier New" style="font-family: 'Courier New';">Courier New</option>
+    <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+    <option value="Times New Roman" style="font-family: 'Times New Roman';">Times New Roman</option>
+    <option value="Trebuchet MS" style="font-family: 'Trebuchet MS';">Trebuchet MS</option>
+    <option value="Verdana" style="font-family: Verdana;">Verdana</option>
+    <!-- Add more font options with preview here -->
   </select>
   <button id="applyFont">Apply Font</button>
 
